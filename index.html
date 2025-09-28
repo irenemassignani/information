@@ -1,6 +1,7 @@
 <!-- definiamo il tipo di pagina -->
 <!DOCTYPE html>
 <html lang="en">
+
 <!--La sezione head contiene tutte le informazioni utili per la gestione della
     pagina
     • Titolo della pagina (visualizzabile nella barra del browser) <title>…</title>
@@ -10,26 +11,33 @@
     -->
 <head>
     <title> Index of Informatica Applicata Sezione C2 2025-2026</title>
+    <link rel="stylesheet" href="style.css">  
 </head>
 <!-- La sezione body contiene la descrizione degli elementi da visualizzare
 nella pagina web e le loro caratteristiche
 • Non solo testo, link e immagini ma anche la loro disposizione e formattazione -->
 <body>
+    
+    <div class="contenitore1"><img id=post1 src="images/postit.png"></div>
+    <div class="contenitore2"><img id=post2 src="images/post2.png"></div>
+    <div class="contenitore3"><img id=foglio src="images/foglio.png"></div>
+    <div class="contenitore4"><img id=foglio src="images/foglio2.png"></div>
     <!-- Questi elementi vengono chiamati titoli (heading) e il numero associato
 corrisponde al livello -->
-    <h1>Index of Informatica Applicata C2 2025-2026</h1>
+    <div class="testo"><h1>Index of <br>Informatica <br>Applicata C2 <br>2025-2026</h1></div>
     <!-- <p>…</p> crea un paragrafo di testo (con spaziatura prima e dopo)
 • </br> indica semplicemente di creare una nuova linea ("a capo") -->
-    <p align="center">We are going to keep track of our progress here</p>
-    <ul>
-        <li><a href="lezione1/lezione1.html">Class 1</a></li>
-        <!-- <li><a href="lezione2/lezione2.html">Class 2</a></li> -->
-        <!-- <li><a href="lezione3/lezione3.html">Class 3</a></li> -->
-        <!-- <li><a href="lezione4/lezione4.html">Class 4</a></li> -->
-        <!-- <li><a href="lezione5/lezione5.html">Class 5</a></li> -->
-        <!-- <li><a href="lezione6/lezione6.html">Class 6</a></li> -->
+    <div class="testo1"><p>We are going to keep track <br>of our progress here</p></div>
+    <div class="testo2"><ul>
+        <a href="lezione1/lezione1.html">Class 1</a>
+        <br><a href="lezione2/lezione2.html">Class 2</a>
+        <br><a href="lezione3/lezione3.html">Class 3</a>
+        <br><a href="lezione4/lezione4.html">Class 4</a>
+        <br><a href="lezione5/lezione5.html">Class 5</a>
+        <br><a href="lezione6/lezione6.html">Class 6</a>
       </ul> 
+      </div>
 
-      <!-- <a href="group-projects/index.html">Click here to see the group projects outcomes</a> -->
+      <div class="testo3"><a href="group-projects/index.html">Click here to see <br> the group projects outcomes</a></div>
 </body>
 </html>
