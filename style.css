@@ -1,0 +1,105 @@
+body {
+      background-image:url(images/AdobeStock_364394845.jpeg);
+      background-size: cover;     
+      background-repeat: no-repeat; 
+      background-attachment: fixed; 
+      background-position: center;  
+    }
+
+    #post1 {
+        width: 500px;
+    }
+.contenitore1 {
+      position: absolute;      /* permette al testo di posizionarsi dentro */
+      display: inline-block;   /* si adatta alla dimensione dell'immagine */
+    }
+
+    .testo {
+      position: absolute;       /* il testo si “sovrappone” */
+      top: 30%;                 /* centrato verticalmente */
+      left: 17%;                /* centrato orizzontalmente */
+      transform: translate(-50%, -50%); /* perfetto centro */
+      color:black;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #post2 {
+        width: 300px;
+        left: 200px;
+        top: 100px
+    }
+
+    .contenitore2 {
+      position: absolute;      /* permette al testo di posizionarsi dentro */
+      top: 0px;
+      left: 300px;   /* si adatta alla dimensione dell'immagine */
+    }
+
+.testo1 {
+      position: absolute;       /* il testo si “sovrappone” */
+      top: 15%;                 /* centrato verticalmente */
+      right: 57.5%;                /* centrato orizzontalmente */
+      transform: translate(-50%, -50%); /* perfetto centro */
+      color:black;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    .contenitore3 {
+      position: relative;      /* permette al testo di posizionarsi dentro */
+      display: inline-block;   /* si adatta alla dimensione dell'immagine */
+      left: 700px;
+    }
+
+    #foglio{
+      width: 500px;
+    }
+
+    .testo2 {
+      position: absolute;       /* il testo si “sovrappone” */
+      top: 15%;                 /* centrato verticalmente */
+      right:500px;                /* centrato orizzontalmente */
+      color:black;
+      font-size: 50px;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    a{
+      color: black;
+      text-decoration: none;
+    }
+
+    a:hover{
+      color: cornflowerblue;
+      text-decoration: underline;
+    }
+
+    .contenitore4 {
+      position: relative;      /* permette al testo di posizionarsi dentro */
+      display: inline-block;   /* si adatta alla dimensione dell'immagine */
+      left: -300px;
+      bottom: -10px;
+    }
+
+    #foglio2{
+      width: 100px;
+      
+    }
+
+    .testo3 {
+      position: absolute;       /* il testo si “sovrappone” */
+      top: 65%;                 /* centrato verticalmente */
+      right: 47%;                /* centrato orizzontalmente */
+      transform: translate(-50%, -50%); /* perfetto centro */
+      color:black;
+      font-size: 25px;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
