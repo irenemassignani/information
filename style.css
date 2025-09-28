@@ -10,15 +10,15 @@ body {
         width: 500px;
     }
 .contenitore1 {
-      position: absolute;      /* permette al testo di posizionarsi dentro */
-      display: inline-block;   /* si adatta alla dimensione dell'immagine */
-    }
+      position: absolute;      
+      display: inline-block; 
+}  
 
     .testo {
-      position: absolute;       /* il testo si “sovrappone” */
-      top: 30%;                 /* centrato verticalmente */
-      left: 17%;                /* centrato orizzontalmente */
-      transform: translate(-50%, -50%); /* perfetto centro */
+      position: absolute;       
+      top: 30%;                 
+      left: 17%;                
+      transform: translate(-50%, -50%); 
       color:black;
       font-size: 20px;
       font-weight: bold;
@@ -33,16 +33,16 @@ body {
     }
 
     .contenitore2 {
-      position: absolute;      /* permette al testo di posizionarsi dentro */
+      position: absolute;      
       top: 0px;
-      left: 300px;   /* si adatta alla dimensione dell'immagine */
+      left: 300px;   
     }
 
 .testo1 {
-      position: absolute;       /* il testo si “sovrappone” */
-      top: 15%;                 /* centrato verticalmente */
-      right: 57.5%;                /* centrato orizzontalmente */
-      transform: translate(-50%, -50%); /* perfetto centro */
+      position: absolute;       
+      top: 15%;                 
+      right: 57.5%;                
+      transform: translate(-50%, -50%); 
       color:black;
       font-size: 16px;
       font-weight: bold;
@@ -51,8 +51,8 @@ body {
     }
 
     .contenitore3 {
-      position: relative;      /* permette al testo di posizionarsi dentro */
-      display: inline-block;   /* si adatta alla dimensione dell'immagine */
+      position: relative;      
+      display: inline-block;   
       left: 700px;
     }
 
@@ -61,9 +61,9 @@ body {
     }
 
     .testo2 {
-      position: absolute;       /* il testo si “sovrappone” */
-      top: 15%;                 /* centrato verticalmente */
-      right:500px;                /* centrato orizzontalmente */
+      position: absolute;       
+      top: 15%;                 
+      right:500px;                
       color:black;
       font-size: 50px;
       font-weight: bold;
@@ -81,8 +81,8 @@ body {
     }
 
     .contenitore4 {
-      position: relative;      /* permette al testo di posizionarsi dentro */
-      display: inline-block;   /* si adatta alla dimensione dell'immagine */
+      position: relative;      
+      display: inline-block;   
       left: -300px;
       bottom: -10px;
     }
@@ -93,10 +93,10 @@ body {
     }
 
     .testo3 {
-      position: absolute;       /* il testo si “sovrappone” */
-      top: 65%;                 /* centrato verticalmente */
-      right: 47%;                /* centrato orizzontalmente */
-      transform: translate(-50%, -50%); /* perfetto centro */
+      position: absolute;       
+      top: 65%;                 
+      right: 47%;                
+      transform: translate(-50%, -50%); 
       color:black;
       font-size: 25px;
       font-weight: bold;
