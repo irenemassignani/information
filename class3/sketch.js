@@ -8,6 +8,9 @@ let yRazzo = yMax*0.6;
 let table;
 let star_img;
 
+let scaladibase = 1;
+let tempo = 1;
+
 //creare asset prima che la pagina venga visualizzata
 function preload(){
  table = loadTable("stars.csv", "csv", "header");
@@ -66,8 +69,13 @@ function drawstar(num_stars=120){
   }
 }
 
- function drawrazzo(xRazzo, yRazzo) {
+ function drawrazzo(xRazzo, yRazzo, scalaB=1, ruota=30) {
   push();
+  translate(xRazzo, yRazzo);
+  rotate(ruota);
+  //scalare
+  scale(scalaB);
+
   fill(200);
   stroke(40);
   //alternativa di disegno
@@ -113,64 +121,12 @@ function draw() {
   textSize(20);
   //stringa, x,y
   text("mouseX: " + mouseX + ", mouseY: " + mouseY,20,20);
-  
-  //contesto di disegno
-  
-  
-  //disegnare 120 stelle ellipse
-  push();
-
-  //for(let i=0; i < 40; i++){
-    //let starX =(i*37) % width +(i%3) * 5;
-    //let starY = ((i*73) % height) + (i%7);
-    //fill(255, 255, 150);
-    //ellipse(starX,starY,5);}
   noStroke();
-
-  //for(let i=0; i < 120; i++){
-    //let starX =(i*37) % width +(i%3) * 5;
-    //let starY = ((i*73) % height) + (i%7);
-    //operatore di modulo %
-    //stella a quando i è pari
-    //if(i % 2 ==0){
-      //stella tipo a
-    //fill(255, 255, 150);
-    //ellipse(starX,starY,1);
-    //per ogni i che è divisibile per 3
-    //}else if(i % 3 ==0){
-      //stella b
-    //fill(200, 100, 255);
-    //ellipse(starX,starY,1.5);
-    //}else{
-      //stella c
-    //fill(255, 255, 100);
-    //ellipse(starX,starY,2.8);
-    //}
-  //}
-    
-    
- frameRate();
-  //for(let i=0; i < 120; i++){
-    //let starX = random (0, xMax);
-    //let starY = random (0, yMax);
-    //operatore di modulo %
-    //stella a quando i è pari
-    
-    //random_transparency = random (150, 255);
-    //random_size = random (6.8, 15.0);
-
-    //drawsinglestar(i, starX, starY, random_transparency,random_size);
-  //}
-
-  //drawstar(num_stars=10);
+  frameRate(); 
+  let variazionescala = scaladibase * Math.abs(sin(tempo));
   drawstarsfromfile();
-  drawrazzo(xRazzo, yRazzo);
+  drawrazzo(xRazzo, yRazzo, variazionescala);
   yRazzo = volo( yRazzo, );
-
-
-  pop();
+  tempo += 1;
 
 }
-
-
-
