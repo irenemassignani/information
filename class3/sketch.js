@@ -10,6 +10,13 @@ let star_img;
 
 let scaladibase = 1;
 let tempo = 1;
+let ruota2 = 1;
+
+let stars_valid = [];
+
+function filterstarsizes(star_value){;
+  return star_value > 0; 
+}
 
 //creare asset prima che la pagina venga visualizzata
 function preload(){
@@ -19,6 +26,15 @@ function preload(){
 
 function setup() {
   createCanvas(xMax, yMax);
+  frameRate(30);
+
+  for(let i=0; i < table.getRowCount(); i++){
+    let stars_value = table.getNum(i, "starSize");
+    if(filterstarsizes(stars_value)){
+      stars_valid.push(stars_value);
+
+    }
+  }
 }
 
 function drawsinglestarfromfile(index, xMax, yMax) {
@@ -73,6 +89,7 @@ function drawstar(num_stars=120){
   push();
   translate(xRazzo, yRazzo);
   rotate(ruota);
+  translate(-xRazzo, -yRazzo);
   //scalare
   scale(scalaB);
 
@@ -80,24 +97,24 @@ function drawstar(num_stars=120){
   stroke(40);
   //alternativa di disegno
   rectMode(CENTER);
-  rect(xRazzo, yRazzo+30, 80, 180,20);
+  rect(0, 0+30, 80, 180,20);
   
   //cerchio
   fill(40, 150, 220);
   stroke(225);
   strokeWeight(3);
-  ellipse(xRazzo, yRazzo+30, 48, 48);
+  ellipse(0, 30, 48, 48);
   //circle( 250, 250, 30, 30)
 
   //triangolo
   fill(200, 40,40);
   stroke(40);
   strokeWeight(1);
-  triangle(xRazzo-40, yRazzo-60, xRazzo+40, yRazzo-60, xRazzo, yRazzo-120);
+  triangle(0-40, 0-60, 0+40, 0-60, 0, 0-120);
 
   fill(200, 40,40);
-  triangle(xRazzo-40, yRazzo+100, xRazzo-60, yRazzo+100, xRazzo-40, yRazzo+10);
-  triangle(xRazzo+40, yRazzo+100, xRazzo+60, yRazzo+100, xRazzo+40, yRazzo+10);
+  triangle(0-40, 0+100, 0-60, 0+100, 0-40, 0+10);
+  triangle(0+40, 0+100, 0+60, 0+100, 0+40, +10);
   pop();
   return;
   }
@@ -122,11 +139,22 @@ function draw() {
   //stringa, x,y
   text("mouseX: " + mouseX + ", mouseY: " + mouseY,20,20);
   noStroke();
-  frameRate(); 
-  let variazionescala = scaladibase * Math.abs(sin(tempo));
-  drawstarsfromfile();
-  drawrazzo(xRazzo, yRazzo, variazionescala);
-  yRazzo = volo( yRazzo, );
+  frameRate(5); 
+  image(star_img,50,50,min(stars_valid), min(stars_valid));
+  image(star_img,100,100,max(stars_valid), max(stars_valid));
+  //drawstarsfromfile();
+  /*let variazionescala = scaladibase * Math.abs(sin(tempo));
+  drawrazzo(xRazzo, yRazzo, variazionescala, ruota2);
+  yRazzo = volo(yRazzo);
   tempo += 1;
-
+  ruota2 +=1 */
 }
+
+/*function mousePressed(){
+  //stop e go animazione tramite clic
+  if(isLooping()){
+  noLoop();
+  }else{
+    loop();
+  }
+} */
